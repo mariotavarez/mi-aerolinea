@@ -27,7 +27,6 @@ const Home = () => {
           }
           title={"La mejor aerolínea de toda latinoamérica"}
         />
-        {/* <Search /> */}
       </div>
       {/* SCREEN */}
       {/* PARAGRAPH */}

@@ -1,0 +1,27 @@
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+
+// MAIN CONTAINER
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "navbar"
+        "main"
+        "footer";
+}
+// NAVBAR
+.navbar {
+    grid-area: navbar;
+}
+// MAIN: HOME, SELECTION, MY RESERVATIONS, CONFIRM DATA
+.main {
+    grid-area: main;
+}
+// FOOTER
+.footer {
+    grid-area: footer;
+}

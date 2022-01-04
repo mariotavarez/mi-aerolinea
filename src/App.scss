@@ -7,35 +7,11 @@ html body {
     background-color: $color-gray-4;
 }
 
-/******************************************************************************/
-                                //GRID ESTRUCTURE
-/*******************************************************************************/
-
-// MAIN CONTAINER
-.main_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-        "navbar"
-        "main"
-        "footer";
+a {
+    color: $color-white-1;
+    text-decoration: none;
+    cursor: pointer;
 }
-// NAVBAR
-.navbar {
-    grid-area: navbar;
-}
-// MAIN: HOME, SELECTION, MY RESERVATIONS, CONFIRM DATA
-.main {
-    grid-area: main;
-}
-// FOOTER
-.footer {
-    grid-area: footer;
-}
-
-
-
 
 /******************************************************************************/
                                 //BUTTONS

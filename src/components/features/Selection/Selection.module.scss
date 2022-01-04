@@ -1,0 +1,22 @@
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER SELECTION
+.container_selection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'screen'
+                         'card-aeroline';
+}
+
+// SCREEN
+.screen {
+    grid-area: screen;
+}
+
+// CARD AEROLINE
+.card_aeroline {
+    grid-area: card-aeroline;
+}
