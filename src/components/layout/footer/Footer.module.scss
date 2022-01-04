@@ -1,0 +1,50 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+
+/***************************************************/
+/****** GRID ESTRUCTURES
+/***************************************************/
+
+// CONTAINER FOOTER
+.container_footer {
+    display: grid;
+    height: 100%;
+    background-color: $color-blue-3;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: '. follow_us .'
+                         '. social_media .'
+                         '. copyright .';
+}
+
+// FOLLOW US
+.follow_us {
+    grid-area: follow_us;
+}
+
+// SOCIAL MEDIA
+.social_media {
+    color: $color-white-1;
+    display: grid;
+    grid-area: social_media;
+    grid-template-columns: repeat(3, auto);
+    margin: 0 5rem 0 5rem;
+}
+
+// COPYRIGHT
+.copyright {
+    grid-area: copyright;
+}
+
+/***************************************************/
+/****** GENERAL STYLES
+/***************************************************/
+p {
+    font-family: Noto Sans;
+    color: $color-gray-3;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 27px;
+}

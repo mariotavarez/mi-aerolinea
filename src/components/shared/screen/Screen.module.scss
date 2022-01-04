@@ -1,0 +1,55 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER SCREEN
+.container_screen {
+    display: grid;
+    grid-template-areas: 'title' 
+                         'content';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    position: relative;
+}
+
+// IMG SCREEN
+.img_screen {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+} img {
+    height: auto;
+    max-height: 50vh;
+    width: 100%;
+
+}
+
+// SEARCH
+.search {
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%, -20%);
+    width: 100%;
+}
+
+/******************************************************************************/
+                                //GENERAL STYLES
+/*******************************************************************************/
+
+h1 {
+    color: $color-white-1;
+    font-size: 24px;
+    font-weight: bold;
+    grid-area: title;
+    left: 50%;
+    position: absolute;
+    top: 15%;
+    transform: translate(-50%, -10%);
+}

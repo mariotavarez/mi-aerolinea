@@ -1,0 +1,27 @@
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINTER HOME
+.container_home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'screen'
+                         'paragraph';
+}
+
+// SCREEN IMAGES
+.screen {
+    grid-area: screen;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+// PARAGRAPH
+.paragraph {
+    padding: 3rem;
+    grid-area: paragraph;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

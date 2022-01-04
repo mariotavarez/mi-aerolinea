@@ -1,0 +1,38 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER NAVBAR
+.container_navbar {
+    background-color: $color-blue-3;
+    color: $color-white-1;
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1fr 1rem;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". logo shopping-cart .";
+}
+
+// LOGO - MI AEROLINEA
+.logo {
+    grid-area: logo;
+    font-weight: bold;
+}
+
+// SHOPPING CART
+.shopping_cart {
+    grid-area: shopping-cart;
+    justify-self: end;
+    align-self: center;
+}
+
+// SHOPPING CART HOVER
+.shopping_cart:hover {
+    color: $color-blue-2;
+    transition: 1s;
+}

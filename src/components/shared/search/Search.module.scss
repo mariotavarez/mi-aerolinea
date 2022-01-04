@@ -1,0 +1,44 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER SEARCH
+.container_search {
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: auto, 1fr;
+    grid-template-areas: 'header'
+                         'content';
+    justify-content: center;
+}
+
+// HEADER
+.header {
+    background-color: $color-blue-3;
+    grid-area: header;
+    padding: 1rem 2rem  1rem 2rem;
+    color: $color-blue-2;
+} span {
+    display: block;
+    font-weight: bold;
+}
+
+
+// CONTENT
+.content {
+    background-color: $color-gray-4;
+    border: 0.3px solid $color-gray-3;
+    grid-area: content;
+    height: 200px;
+    display: grid;
+    align-items: center;
+}
+
+
+
+
+/******************************************************************************/
+                                // GENERAL STYLES
+/*******************************************************************************/

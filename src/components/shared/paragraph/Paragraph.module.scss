@@ -1,0 +1,24 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+
+/********************************************/
+    /*******GRID ESTRUCTURE********/
+
+/********************************************/
+
+// PARAGRAPH CONTAINER
+.paragraph_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding: 1rem;
+}
+
+// PARAGRAPH CONTENT
+.paragraph_content {
+    color: $color-black-1;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 15px;
+}
