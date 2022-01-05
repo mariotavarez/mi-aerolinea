@@ -1,0 +1,87 @@
+// Styles
+@import '../../../../assets/styles/colors.scss';
+
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER AEROLINE
+.container_aeroline {
+    align-items: center;
+    background: $color-white-1;
+    border: 1px solid $color-white-1;
+    box-shadow: 0px 4px 4px rgba(126, 126, 126, 0.25);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 'img_aeroline data_aeroline price_data';
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+// IMG AEROLINE
+.img_aeroline {
+    align-items: center;
+    display: grid;
+    grid-area: img_aeroline;
+    justify-items: center;
+   & img {
+        width: 100%;
+        height: auto;
+    }
+} 
+
+// DATA AEROLINE
+.data_aeroline {
+    display: grid;
+    grid-area: data_aeroline;
+    grid-template-areas: 'container_origen_destino';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+// CONTAINER ORIGEN DESTINO
+.container_origen_destino {
+    display: grid;
+    grid-area: container_origen_destino;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-self: center;
+    & p {
+        color: $color-black-1;
+        font-weight: bold;
+        text-align: center;
+        padding: 0 2rem 0 2rem;
+        // Begin 1 column to 3 column
+        grid-column: 1 / span 3;
+        // Begin 1 row to same row number
+        grid-row: 1 / span 1;
+    }
+    &  span {
+        font-weight: normal;
+        color: $color-gray-1;
+        padding: 0 2rem 0 2rem;
+    }
+
+    & .container_data_detail {
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
+} 
+
+// PRICE DATA
+.price_data {
+    grid-area: price_data;
+    border-left: 1px solid $color-gray-2;
+    padding: 1rem;
+}
+/******************************************************************************/
+                                // GENERAL STYLES
+/*******************************************************************************/
+
+// TITLE ORIGEN - DESTINO
+.title {
+    font-size: 20px;
+}

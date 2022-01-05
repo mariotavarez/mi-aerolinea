@@ -7,11 +7,13 @@
 .main_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: auto auto 3rem auto;
     grid-template-areas:
         "navbar"
         "main"
+        '.'
         "footer";
+        position: relative;
 }
 // NAVBAR
 .navbar {
@@ -20,6 +22,7 @@
 // MAIN: HOME, SELECTION, MY RESERVATIONS, CONFIRM DATA
 .main {
     grid-area: main;
+    align-items: center;
 }
 // FOOTER
 .footer {

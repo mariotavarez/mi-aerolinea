@@ -4,7 +4,8 @@
     "name": "origen",
     "label": "Origen",
     "value": "",
-    "options": [],
+    "options": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "dynamic": true,
     "validations": [
       {
         "type": "required"
@@ -16,7 +17,8 @@
     "name": "destino",
     "label": "Destino",
     "value": "",
-    "options": [],
+    "options": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "dynamic": true,
     "validations": [
       {
         "type": "required"
@@ -25,6 +27,7 @@
   },
   {
     "type": "date",
+    "dynamic": false,
     "name": "fechaSalida",
     "label": "Fecha de salida",
     "value": "",
@@ -37,6 +40,7 @@
   },
   {
     "type": "select",
+    "dynamic": false,
     "name": "pasajeros",
     "label": "Pasajeros",
     "value": "",

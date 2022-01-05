@@ -3,7 +3,12 @@ export { Button } from "./button/Button";
 // Search
 export { Search } from "./search/Search";
 // Cards
-export { CardAeroline, CardAerolineDetail, CardAerolinePrice } from "./cards/";
+export {
+  CardAeroline,
+  CardAerolineDetail,
+  CardAerolinePrice,
+  CardPrice,
+} from "./cards/";
 // Paragraph
 export { Paragraph } from "./paragraph/Paragraph";
 // Screen

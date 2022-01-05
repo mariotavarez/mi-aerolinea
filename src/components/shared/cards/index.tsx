@@ -4,3 +4,5 @@ export { CardAeroline } from "./cardAeroline/CardAeroline";
 export { CardAerolineDetail } from "./cardAerolineDetail/CardAerolineDetail";
 // Card Aeroline Price
 export { CardAerolinePrice } from "./cardAerolinePrice/CardAerolinePrice";
+// Card Price
+export { CardPrice } from "./cardPrice/CardPrice";

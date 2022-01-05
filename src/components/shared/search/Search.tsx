@@ -1,10 +1,19 @@
+// React Hooks
+import { useEffect, useState } from "react";
 // Styles
 import search from "./Search.module.scss";
+// React Redux
+import { useDispatch, useSelector } from "react-redux";
 // Icons
-import { FaPlaneDeparture } from "react-icons/fa";
+import { FaPlaneDeparture, FaSearch } from "react-icons/fa";
+// Shared
 import { FormGenerator } from "../forms/FormGenerator";
 // Models
 import { FormModel } from "../../../interfaces/forms/FormModel";
+// Json
+import searchJsonForm from "../../../data/forms/Search.json";
+// Actions
+import { searchCities as getCities } from "../../../actions/searchAction";
 
 /**
  * @author Mario Tavarez
@@ -14,9 +23,31 @@ import { FormModel } from "../../../interfaces/forms/FormModel";
  * @returns
  */
 export const Search = () => {
+  const dispatch = useDispatch();
+
+  // Use Effect Hook for call search cities
+  useEffect(() => {
+    searchCities();
+  }, []);
+
+  // Get the values of the state
+  const { ciudades } = useSelector((state: any) => state.searchAction);
+
   const formData: FormModel = {
-    jsonStructure: null,
+    jsonStructure: searchJsonForm,
     nameButton: "Buscar",
+    icon: <FaSearch size={"1rem"} />,
+    typeBtn: "submit",
+    actionButton: () => handleSearch(),
+  };
+
+  // Search the cities
+  const searchCities = () => {
+    dispatch(getCities());
+  };
+
+  const handleSearch = () => {
+    alert("Evento lanzado");
   };
 
   return (
@@ -29,9 +60,7 @@ export const Search = () => {
       {/* HEADER */}
       {/* CONTENT */}
       <div className={search.content}>
-        {/* FORM */}
         <FormGenerator {...formData} />
-        {/* FORM */}
       </div>
       {/* CONTENT */}
     </div>
