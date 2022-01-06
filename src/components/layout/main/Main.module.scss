@@ -1,7 +1,6 @@
 /******************************************************************************/
-                                //GRID ESTRUCTURE
+//GRID ESTRUCTURE
 /*******************************************************************************/
-
 
 // MAIN CONTAINER
 .main_container {
@@ -13,18 +12,40 @@
         "main"
         '.'
         "footer";
-        position: relative;
+    position: relative;
 }
+
 // NAVBAR
 .navbar {
     grid-area: navbar;
 }
+
 // MAIN: HOME, SELECTION, MY RESERVATIONS, CONFIRM DATA
 .main {
     grid-area: main;
     align-items: center;
 }
+
 // FOOTER
 .footer {
     grid-area: footer;
+}
+
+
+/******************************************************************************/
+                        //RESPONSIVE MEDIA QUERIES
+/*******************************************************************************/
+
+@media only screen and (max-width: 600px) {
+    .main_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "navbar"
+            "main"
+            '.'
+            "footer";
+        position: relative;
+    }
 }

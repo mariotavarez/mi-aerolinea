@@ -15,3 +15,5 @@ export { Paragraph } from "./paragraph/Paragraph";
 export { Screen } from "./screen/Screen";
 // Form Generator
 export { FormGenerator } from "./forms/FormGenerator";
+// Loading
+export { Loading } from "./loading/Loading";

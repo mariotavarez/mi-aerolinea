@@ -1,0 +1,84 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER MY RESERVATION
+.container_my_reservation {
+    display: grid;
+    grid-template-rows: auto 20px auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'title_reservation title_reservation'
+                        '. .'
+                        '. aeroline_price'
+                         'card_aeroline_detail card_aeroline_detail'
+                         'no_items no_items';
+
+}
+
+// TITLE RESERVATION
+.title_reservation {
+    grid-area: title_reservation;
+    color: $color-blue-3;
+    font-style: normal;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+// CARD AEROLINE DETAIL
+.card_aeroline_detail {
+    display: grid;
+    margin: 1rem;
+    grid-area: card_aeroline_detail;
+}
+
+// AEROLINE PRICE
+.aeroline_price {
+    grid-area: aeroline_price;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas: 'cards_price'
+                         'price_container'
+                        'button_container';
+}
+
+.price_container {
+    grid-area: price_container;
+    display: grid;
+    justify-self: end;
+    font-size: 20px;
+}
+
+// BUTTON CONTAINER
+.button_container {
+    padding: 1rem 0 1rem 0;
+    grid-area: button_container;
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+    justify-items: start;
+
+}
+
+// CARDS PRICE
+.cards_price {
+    grid-area: cards_price;
+    display: grid;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.no_items {
+    grid-area: no_items;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 4rem;
+    & div {
+        justify-self: center;
+    }
+
+}

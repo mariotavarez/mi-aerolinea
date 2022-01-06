@@ -1,7 +1,5 @@
 // Styles
 import footer from "./Footer.module.scss";
-// Models
-import { IconModel } from "../../../interfaces/icons/IconsModel";
 // Data
 import { SOCIAL_MEDIA_DATA } from "../../../data/footer/socialMedia.data";
 

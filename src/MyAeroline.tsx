@@ -1,5 +1,6 @@
 // Styles
 import "./App.scss";
+import "animate.css";
 // React Redux
 import { Provider } from "react-redux";
 // Store

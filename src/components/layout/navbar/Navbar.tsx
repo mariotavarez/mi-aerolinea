@@ -1,9 +1,11 @@
 // Styles
 import navbar from "./Navbar.module.scss";
+// React Redux
+import { useSelector } from "react-redux";
 // React Router
 import { NavLink } from "react-router-dom";
 // Icons
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaCartPlus, FaShoppingCart } from "react-icons/fa";
 
 /**
  * @author Mario Tavarez
@@ -12,6 +14,8 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
  * @returns
  */
 export const Navbar = () => {
+  const myShoppingCart = useSelector((state: any) => state.shoppingCartAction);
+
   return (
     <>
       <div className={navbar.container_navbar}>
@@ -23,9 +27,13 @@ export const Navbar = () => {
 
         {/* TITLE */}
         {/* SHOPPING CART */}
-        <span className={navbar.shopping_cart}>
+        <span className={`${navbar.shopping_cart}`}>
           <NavLink to={"my-reservations"}>
-            <AiOutlineShoppingCart size={"2rem"} />
+            {myShoppingCart && myShoppingCart.length > 0 ? (
+              <FaCartPlus size={"2rem"} />
+            ) : (
+              <FaShoppingCart size={"2rem"} />
+            )}
           </NavLink>
         </span>
         {/* SHOPPING CART */}

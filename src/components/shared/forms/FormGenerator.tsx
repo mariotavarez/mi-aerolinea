@@ -23,8 +23,9 @@ export const FormGenerator = ({
   icon,
   jsonStructure,
   rows = 1,
-  actionButton,
+  onChildClick,
   typeBtn = "submit",
+  setValueForm,
 }: FormModel) => {
   // Initial Values
   const initialValues: { [key: string]: any } = {};
@@ -72,8 +73,8 @@ export const FormGenerator = ({
     <>
       <Formik
         initialValues={initialValues}
-        onSubmit={(values) => {
-          console.log("values: ", values);
+        onSubmit={async (values) => {
+          onChildClick(true);
         }}
         validationSchema={validationSchema}
       >
@@ -98,6 +99,7 @@ export const FormGenerator = ({
                     type.includes("text") ||
                     type.includes("date") ||
                     type.includes("number") ||
+                    type.includes("email") ||
                     type.includes("date")
                   ) {
                     return (
@@ -141,7 +143,7 @@ export const FormGenerator = ({
                   typeBtn={typeBtn}
                   text={nameButton}
                   icon={icon}
-                  actionButton={actionButton}
+                  onChildClick={setValueForm(formik.values)}
                 />
               </div>
               {/* ACTION BUTTON */}

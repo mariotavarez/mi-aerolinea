@@ -31,8 +31,10 @@ button {
     padding: 10px 35px;
     display: flex;
     align-items: center;
-}:hover {
-    font-size: 16px;
+    &:hover {
+        font-size: 16px;
+
+    }
 }
 /**
 ------
@@ -67,16 +69,16 @@ Colors
                                 // INPUTS
 /*******************************************************************************/
 
-select  {
+input,
+select {
     border-radius: 5px;
-    border: 1px solid $color-gray-3;
-    padding: 10px 15px;
-    
-}
-
-input {
-    border: none;
-    padding: 10px 10px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 
 }
 
@@ -130,9 +132,9 @@ label {
 
 // FORM GROUP TWO ROWS
 .form-group-two-rows{
-    display: grid;
-    grid-template-rows: 2fr;
-    grid-template-columns: repeat(2, auto);
+    display: block;
+    // grid-template-rows: 2fr;
+    // grid-template-columns: repeat(2, auto);
 }
 
 
@@ -147,8 +149,21 @@ Colors
 **/
 .icon {
     color: $color-blue-1;
-}:hover {
-  transition: 0.1s;  
+    &:hover {transition: 0.1s;  }
 }
 
 
+/******************************************************************************/
+                        //RESPONSIVE MEDIA QUERIES
+/*******************************************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    // FORM GROUP ONE ROW
+    .form-group-one-row {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        align-items: flex-end;
+    }
+}

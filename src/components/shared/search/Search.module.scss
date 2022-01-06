@@ -7,7 +7,7 @@
 // CONTAINER SEARCH
 .container_search {
     display: grid;
-    grid-template-columns: 70%;
+    grid-template-columns: 90%;
     grid-template-rows: auto, 1fr;
     grid-template-areas: 'header'
                          'content';
@@ -42,3 +42,26 @@
 /******************************************************************************/
                                 // GENERAL STYLES
 /*******************************************************************************/
+/******************************************************************************/
+                        //RESPONSIVE MEDIA QUERIES
+/*******************************************************************************/
+
+@media only screen and (max-width: 600px) {
+    .container_search {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: auto, auto;
+        grid-template-areas: 'header'
+                             'content';
+        justify-content: center;
+    }
+   // CONTENT
+.content {
+    background-color: $color-gray-4;
+    border: 0.3px solid $color-gray-3;
+    grid-area: content;
+    height: 400px;
+    display: grid;
+    align-items: center;
+}
+}

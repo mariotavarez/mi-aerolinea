@@ -1,0 +1,78 @@
+// Colors
+@import '../../../../assets/styles/colors.scss';
+
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER AEROLINE PRICE
+.container_aeroline_price {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+    border: 1px solid $color-gray-3;
+    background-color: $color-white-1;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 'header_aeroline_price'
+                        'content_aeroline_price'
+                        'footer_aeroline_price';
+}
+
+
+
+// HEADER AEROLINE PRICE
+.header_aeroline_price {
+    display: grid;
+    grid-area: header_aeroline_price;
+    height: auto;
+    background-color: $color-gray-2;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-template-areas: 'aeroline_img_price aeroline_origen_destino_price';
+    & span {
+        font-size: 13px;
+        font-weight: bold;
+        color: $color-black-2;
+        overflow: hidden;
+        text-overflow: "..."; 
+    }
+}
+
+// AEROLINE IMG PRICE
+.aeroline_img_price {
+    grid-area: aeroline_img_price;
+    display: grid;
+    height: auto;
+    justify-self: center;
+    width: 30%;
+    
+}
+
+// AEROLINE ORIGEN DESTINO PRICE
+.aeroline_origen_destino_price {
+    grid-area: aeroline_origen_destino_price;
+    display: grid;
+}
+
+// CONTENT AEROLINE PRICE
+.content_aeroline_price {
+    display: grid;
+    grid-area: content_aeroline_price;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-bottom: 2px solid $color-gray-2;
+    padding: 1rem
+}
+
+// FOOTER AEROLINE PRICE
+.footer_aeroline_price {
+    display: grid;
+    grid-area: footer_aeroline_price;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.footer_aeroline_price_detail {
+    display: grid;
+    grid-column: 2 / span 1;
+}

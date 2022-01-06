@@ -6,14 +6,14 @@ export const Button = ({
   size = "md",
   type,
   icon,
-  actionButton,
+  onChildClick,
   typeBtn = "button",
 }: ButtonModel) => {
   return (
     <>
       <button
         type={typeBtn}
-        onClick={() => actionButton}
+        onClick={onChildClick}
         className={`${type} ${size}`}
       >
         {text} {icon}

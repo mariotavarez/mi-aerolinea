@@ -1,0 +1,39 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+
+.container_loader {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/miaerolinea-23192.appspot.com/o/miaerolinea%2Fbanners%2Fbackground.jpg?alt=media&token=d5d4e131-6d77-4fe7-bf3f-8eca902fd9d0');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loader {
+    display: grid;
+    grid-template-rows: 1 / span 1;
+    justify-self: center;
+    align-self: center;
+    border: 16px solid $color-white-1;
+    border-radius: 50%;
+    border-top: 16px solid $color-blue-1;
+    border-right: 16px solid $color-gray-2;
+    border-bottom: 16px solid $color-black-1;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

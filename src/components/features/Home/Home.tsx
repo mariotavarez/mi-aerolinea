@@ -1,7 +1,9 @@
 // Shared
-import { Paragraph, Screen, Search } from "../../shared";
+import { CardAeroline, Paragraph, Screen } from "../../shared";
 // Styles
 import home from "./Home.module.scss";
+// React Redux
+import { useSelector } from "react-redux";
 // Data
 import { PARAGRAPH_DATA } from "../../../data/home/paragraph.data";
 
@@ -16,6 +18,8 @@ const Home = () => {
   const paragraph = PARAGRAPH_DATA.map(({ icon }, index) => (
     <Paragraph key={index} icon={icon} />
   ));
+  // Travels
+  const { viajes } = useSelector((state: any) => state.travelsAction);
 
   return (
     <>
@@ -29,9 +33,20 @@ const Home = () => {
         />
       </div>
       {/* SCREEN */}
-      {/* PARAGRAPH */}
-      <div className={home.paragraph}>{paragraph}</div>
-      {/* PARAGRAPH */}
+      {viajes ? (
+        <div className={home.card_aeroline_home}>
+          {viajes.map((viaje: any, index: any) => (
+            <CardAeroline key={index} {...viaje} />
+          ))}
+        </div>
+      ) : (
+        <div
+          className={`${home.paragraph} animate__animated animate__backInDown`}
+        >
+          {paragraph}
+        </div>
+      )}
+      {/* CARD AEROLINE */}
     </>
   );
 };

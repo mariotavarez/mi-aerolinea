@@ -18,16 +18,18 @@ import { ScreenModel } from "../../../interfaces/screen/ScreenModel";
 export const Screen = ({ img, title }: ScreenModel) => {
   return (
     <div className={screen.container_screen}>
-      {/* TITLE */}
-      <h1>{title}</h1>
-      {/* TITLE */}
+      <div className={screen.title}>
+        {/* TITLE */}
+        <h1>{title}</h1>
+        {/* TITLE */}
+      </div>
       {/* IMAGE SCREEN CONTAINER */}
-      <div className={screen.img_screen}>
+      <div className={`${screen.img_screen}`}>
         {/* IMG */}
         <img src={img} alt={title} />
         {/* IMG */}
         {/* SEARCH */}
-        <div className={screen.search}>
+        <div className={`${screen.search}`}>
           <Search />
         </div>
         {/* SEARCH */}

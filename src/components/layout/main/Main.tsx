@@ -8,10 +8,12 @@ import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import { routes } from "../../../routes/routes";
 import { Footer } from "../footer/Footer";
 import { Navbar } from "../navbar/Navbar";
+// Shared
+import { Loading } from "../../shared";
 
 export const Main = () => {
   return (
-    <Suspense fallback={<span>Cargando....</span>}>
+    <Suspense fallback={<Loading />}>
       <BrowserRouter>
         <div className={main.main_container}>
           <div className={main.navbar}>

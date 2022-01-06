@@ -1,0 +1,36 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER MESSAGE
+.container_messages {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'image_message'
+                          'message';
+   
+}
+
+// IMAGE MESSAGE
+.image_message {
+display: grid;
+justify-self: center;
+grid-template-areas: image_message;
+    height: auto;
+    width: 100%;
+}
+
+// MESSAGE
+.message {
+    grid-area: message;
+    color: $color-blue-3;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}

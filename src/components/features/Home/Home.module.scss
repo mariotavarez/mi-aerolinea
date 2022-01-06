@@ -18,10 +18,36 @@
     grid-template-rows: 1fr;
 }
 
+.card_aeroline_home {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 // PARAGRAPH
 .paragraph {
     padding: 3rem;
     grid-area: paragraph;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+/******************************************************************************/
+                        //RESPONSIVE MEDIA QUERIES
+/*******************************************************************************/
+
+@media only screen and (max-width: 600px) {
+    .paragraph {
+        padding: 3rem;
+        grid-area: paragraph;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .container_home {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'screen'
+                             'paragraph';
+    }
 }

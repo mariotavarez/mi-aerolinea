@@ -6,14 +6,19 @@ import { CardPrice } from "..";
 import { TravelsModel } from "../../../../interfaces/cards/TravelsModel";
 
 export const CardAeroline = ({
+  id,
   img,
   salida,
   llegada,
   tiempoVuelo,
   costoPersona,
+  origen,
+  destino,
 }: TravelsModel) => {
   return (
-    <div className={cardAeroline.container_aeroline}>
+    <div
+      className={`animate__animated animate__fadeInDown ${cardAeroline.container_aeroline}`}
+    >
       {/* IMG AEROLINE */}
       <div className={cardAeroline.img_aeroline}>
         <img src={img} alt={img} />
@@ -24,7 +29,14 @@ export const CardAeroline = ({
         {/* CONTAINER ORIGEN DESTINO */}
         <div className={cardAeroline.container_origen_destino}>
           {/* ORIGEN - DESTINO */}
-          <p className={cardAeroline.title}>Origen - Destino</p>
+          <div className={cardAeroline.title}>
+            <p>
+              <span>Origen:</span> {origen}
+            </p>
+            <p>
+              <span>Destino:</span> {destino}
+            </p>
+          </div>
           {/* ORIGEN - DESTINO */}
           {/* CONTAINER DATA DETAIL */}
           <div className={cardAeroline.container_data_detail}>
@@ -47,7 +59,7 @@ export const CardAeroline = ({
 
       {/* PRICE DATA */}
       <div className={cardAeroline.price_data}>
-        <CardPrice costoPersona={costoPersona} />
+        <CardPrice costoPersona={costoPersona} id={id} />
       </div>
       {/* PRICE DATA */}
     </div>

@@ -1,6 +1,5 @@
 // Styles
 @import '../../../../assets/styles/colors.scss';
-
 /******************************************************************************/
                                 //GRID ESTRUCTURE
 /*******************************************************************************/
@@ -26,10 +25,8 @@
     display: grid;
     grid-area: img_aeroline;
     justify-items: center;
-   & img {
-        width: 100%;
-        height: auto;
-    }
+    height: auto;
+    width: 30%;
 } 
 
 // DATA AEROLINE
@@ -83,5 +80,9 @@
 
 // TITLE ORIGEN - DESTINO
 .title {
+    grid-column: 1 / span 3;
     font-size: 20px;
+    text-overflow: ellipsis;
+    justify-self: center;
+    text-align: center;
 }

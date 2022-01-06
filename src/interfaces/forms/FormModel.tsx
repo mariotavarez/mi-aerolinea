@@ -6,6 +6,7 @@ export interface FormModel {
   nameButton: string;
   icon?: ReactElement;
   rows?: 1 | 2;
-  actionButton: any;
+  onChildClick: any;
   typeBtn: "button" | "submit";
+  setValueForm: any;
 }

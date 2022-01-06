@@ -3,6 +3,6 @@ export interface ButtonModel {
   size?: "md" | "lg";
   type?: "primary" | "secondary" | "tertiary";
   icon: any;
-  actionButton?: any;
+  onChildClick?: any;
   typeBtn?: "button" | "submit";
 }

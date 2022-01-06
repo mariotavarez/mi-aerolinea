@@ -1,0 +1,43 @@
+// Colors
+@import '../../../assets/styles/colors.scss';
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER CONFIRM DATA
+.container_confirm_data {
+    display: grid;
+    grid-template-rows: auto 100px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'title_confirm_data title_confirm_data'
+                        '. .'
+                        'form_confirm_data img_confirm_data';
+}
+
+
+.title_confirm_data {
+    grid-area: title_confirm_data;
+    color: $color-blue-3;
+    font-style: normal;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+.form_confirm_data {
+    grid-area: form_confirm_data;
+    display: grid;
+    margin: 0 6rem 0 6rem;
+}
+
+.img_confirm_data {
+   grid-area: img_confirm_data;
+   justify-self: center;
+   align-self: center;
+   & img {
+       width: 100%;
+       height: auto;
+   }
+    
+}

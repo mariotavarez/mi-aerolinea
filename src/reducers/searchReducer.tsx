@@ -7,14 +7,6 @@ export const searchReducer = (state = {}, action: any) => {
       return {
         ciudades: action.payload.ciudades,
       };
-    case Types.uiTravels:
-      return {
-        aerolinea: action.payload.aerolinea,
-        costoPersona: action.payload.costoPersona,
-        destino: action.payload.destino,
-        origen: action.payload.origen,
-        tiempoVuelo: action.payload.tiempoVuelo,
-      };
     default:
       return state;
   }

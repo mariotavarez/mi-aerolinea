@@ -1,0 +1,53 @@
+[
+  {
+    "type": "text",
+    "name": "nombre",
+    "placeholder": "Ingrese su nombre",
+    "label": "Nombre",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "apellidos",
+    "label": "Apellidos",
+    "placeholder": "Ingrese su nombre",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "direccion",
+    "label": "Dirección",
+    "placeholder": "Ingrese su direccion",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "label": "Correo electrónico",
+    "placeholder": "Ingrese su email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email"
+      }
+    ]
+  }
+]
