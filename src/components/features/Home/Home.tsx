@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { PARAGRAPH_DATA } from "../../../data/home/paragraph.data";
 // React Hooks
 import { useEffect } from "react";
+// Actions
 import { cleanTravels } from "../../../actions/travelsAction";
 
 /**
@@ -33,9 +34,10 @@ const Home = () => {
   const { viajes } = useSelector((state: any) => state.travelsAction);
 
   return (
-    <>
+    <div className={home.container_home}>
       {/* SCREEN */}
       <div className={home.screen}>
+        {/* <h4>Screen</h4> */}
         <Screen
           img={
             "https://firebasestorage.googleapis.com/v0/b/miaerolinea-23192.appspot.com/o/miaerolinea%2Fbanners%2Fbanner-4.jpg?alt=media&token=2e0945f3-96a1-407d-a6a6-fcf597a68230"
@@ -58,7 +60,7 @@ const Home = () => {
         </div>
       )}
       {/* CARD AEROLINE */}
-    </>
+    </div>
   );
 };
 

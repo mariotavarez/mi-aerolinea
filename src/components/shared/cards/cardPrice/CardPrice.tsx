@@ -15,8 +15,6 @@ import { AlertModel } from "../../../../interfaces/alerts/AlertModel";
 // Actions
 export const CardPrice = ({
   costoPersona,
-  noPersonas,
-  fecha,
   id,
 }: {
   costoPersona: string;

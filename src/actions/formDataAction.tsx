@@ -3,8 +3,6 @@ import { Types } from "../types/types";
 
 // Add a data to Form Data Store
 export const addFormData = (formData: any) => {
-  console.log("form data ", formData);
-
   return async (dispatch: any) => {
     dispatch(setFormData(formData));
   };

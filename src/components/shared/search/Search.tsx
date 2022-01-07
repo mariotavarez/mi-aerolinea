@@ -63,9 +63,8 @@ export const Search = () => {
 
   // Search the travels
   const handleSearchTravels = () => {
-    console.log(valueForm);
     // Add Form Data
-    const { origen, destino, fechaSalida, pasajeros }: any = valueForm;
+    const { origen, destino, fechaSalida }: any = valueForm;
     // validate if the origen and destino isnt same
     if (origen === destino) {
       infoMessage({
@@ -102,13 +101,13 @@ export const Search = () => {
       className={`${search.container_search} animate__animated animate__flipInX`}
     >
       {/* HEADER */}
-      <div className={search.header}>
+      <div className={search.header_search}>
         <FaPlaneDeparture size={"2rem"} />
         <span>Vuelos</span>
       </div>
       {/* HEADER */}
       {/* CONTENT */}
-      <div className={search.content}>
+      <div className={search.content_search}>
         <FormGenerator {...formData} onChildClick={handleSearchTravels} />
       </div>
       {/* CONTENT */}

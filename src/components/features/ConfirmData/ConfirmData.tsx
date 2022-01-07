@@ -68,10 +68,12 @@ const ConfirmData = () => {
       </div>
       {/* FORM CONFIRM DATA */}
       {/* FORM CONFIRM DATA */}
-      <div className={confirmData.img_confirm_data}>
+      <div
+        className={`${confirmData.img_confirm_data} animate__animated animate__fadeIn`}
+      >
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/miaerolinea-23192.appspot.com/o/miaerolinea%2Fbanners%2Fshopping_cart-removebg-preview.png?alt=media&token=a99588c0-e777-46a2-bbbc-289384136202"
-          alt=""
+          src="https://firebasestorage.googleapis.com/v0/b/miaerolinea-23192.appspot.com/o/miaerolinea%2Fbanners%2Fconfirm-data.png?alt=media&token=f57a561f-079f-42df-996a-18744feec4cf"
+          alt="confirm-data"
         />
       </div>
       {/* FORM CONFIRM DATA */}

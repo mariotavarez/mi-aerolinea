@@ -8,7 +8,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 'screen'
-                         'paragraph';
+                         'paragraph'
+                         'card_aeroline_home';
 }
 
 // SCREEN IMAGES
@@ -21,6 +22,8 @@
 .card_aeroline_home {
     display: grid;
     grid-template-columns: 1fr;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 // PARAGRAPH
 .paragraph {
@@ -35,6 +38,24 @@
 /*******************************************************************************/
 
 @media only screen and (max-width: 600px) {
+    // CONTAINER HOME
+    .container_home {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: 'screen'
+                             'paragraph'
+                             'card_aeroline_home';
+    }
+    // SCREEN
+    .screen {
+        grid-area: screen;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        display: grid;
+    }
+    // PARAGRAPH
     .paragraph {
         padding: 3rem;
         grid-area: paragraph;
@@ -42,12 +63,14 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-
-    .container_home {
+    // CARD AEROLINE HOME
+    .card_aeroline_home {
+        grid-area: card_aeroline_home;
         display: grid;
+        margin: 1rem;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 'screen'
-                             'paragraph';
+        max-height: 100vh;
+        overflow-y: scroll;
     }
+
 }

@@ -18,13 +18,13 @@ Enlace: https://www.figma.com/file/Q7dcl2f63su0xtQ1aV3Gun/Mi-Aerol%C3%ADnea?node
 
 ## Scripts disponibles
 
-Se tienen 3 scripts principales para arrancar el proyecto
+Se tienen 2 scripts principales para arrancar el proyecto
 
 ### 1. `npm install`
 
 El primer paso es instalar las dependencias del proyecto. Dicho proyecto se programó con las siguientes versiones:
-NPM - 8.3.0
-Node - 17.3.0
+`NPM - 8.3.0`
+`Node - 17.3.0`
 
 ### 2 `npm start`
 
@@ -35,7 +35,19 @@ http://localhost:3000
 
 ### `npm test`
 
-Lanza una serie de pruebas del componente Footer
+Lanza una serie de pruebas del componente Footer.
+
+Se mostrarán las siguientes opciones:
+› Press a to run all tests.
+› Press f to run only failed tests.
+› Press q to quit watch mode.
+› Press p to filter by a filename regex pattern.
+› Press t to filter by a test name regex pattern.
+› Press Enter to trigger a test run.
+
+Presione `p` y escriba `Footer.tsx` para correr el set de pruebas.
+
+Presione `q` para salir.
 
 ### `npm run build`
 

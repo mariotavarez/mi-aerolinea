@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en componente <Footer /> debe mostrar el componente correctamente 1`] = `
+<footer
+  className="container_footer"
+>
+  <div
+    className="follow_us"
+  >
+    <p>
+      Siguenos en
+    </p>
+  </div>
+  <div
+    className="social_media"
+  >
+    <span
+      key="0"
+    >
+      <FaInstagram
+        size="2rem"
+      />
+    </span>
+    <span
+      key="1"
+    >
+      <FaFacebookSquare
+        size="2rem"
+      />
+    </span>
+    <span
+      key="2"
+    >
+      <FaTwitter
+        size="2rem"
+      />
+    </span>
+  </div>
+  <div
+    className="copyright"
+  >
+    <p>
+      Copyright 
+      2022
+       © MiAerolinea.com. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+`;

@@ -80,3 +80,32 @@
         color: $color-black-1;
     }
 }
+
+/******************************************************************************/
+                        //RESPONSIVE MEDIA QUERIES
+/*******************************************************************************/
+
+@media only screen and (max-width: 600px) {
+    .header_detail {
+        display: grid;
+        grid-area: header_detail;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        align-items: center;
+        & div {
+    
+        } & p {
+            color: $color-black-1;
+        }
+        
+    }
+
+    .content_detail {
+        display: grid;
+        grid-area: content_detail;
+        grid-template-rows:repeat(3, auto);
+        padding-top: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'horarios_detail' '.' 'duracion_viaje_detail';
+    }
+}

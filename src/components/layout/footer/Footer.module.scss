@@ -21,6 +21,14 @@
 // FOLLOW US
 .follow_us {
     grid-area: follow_us;
+    p {
+        font-family: Noto Sans;
+        color: $color-gray-3;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 27px;
+    }
 }
 
 // SOCIAL MEDIA
@@ -35,16 +43,16 @@
 // COPYRIGHT
 .copyright {
     grid-area: copyright;
+    & p {
+        font-family: Noto Sans;
+        color: $color-gray-3;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 27px;
+    }
 }
 
 /***************************************************/
 /****** GENERAL STYLES
 /***************************************************/
-p {
-    font-family: Noto Sans;
-    color: $color-gray-3;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 27px;
-}

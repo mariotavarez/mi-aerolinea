@@ -1,6 +1,11 @@
 // Styles
 @import '../../../../assets/styles/colors.scss';
 
+/******************************************************************************/
+                                //GRID ESTRUCTURE
+/*******************************************************************************/
+
+// CONTAINER CARD PRICE
 .container_card_price {
     align-items: center;
     display: grid;
@@ -16,4 +21,5 @@
         color: $color-gray-1;
     }
 }
+
 
