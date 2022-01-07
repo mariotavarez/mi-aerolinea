@@ -59,7 +59,12 @@ export const CardAeroline = ({
 
       {/* PRICE DATA */}
       <div className={cardAeroline.price_data}>
-        <CardPrice costoPersona={costoPersona} id={id} />
+        <CardPrice
+          fecha={"2343"}
+          noPersonas={"4"}
+          costoPersona={costoPersona}
+          id={id}
+        />
       </div>
       {/* PRICE DATA */}
     </div>

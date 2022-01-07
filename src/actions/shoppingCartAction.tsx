@@ -8,6 +8,13 @@ export const addTravelToShoppingCart = (myShoppingCart: any) => {
   };
 };
 
+// Remove Travel from shopping cart
+export const removeTravelToShoppingCart = (id: any) => {
+  return async (dispatch: any) => {
+    dispatch(setRemoveShoppingCart(id));
+  };
+};
+
 // Clean Shopping Cart
 export const cleanShoppingCart = () => {
   return async (dispatch: any) => {
@@ -19,6 +26,11 @@ export const cleanShoppingCart = () => {
 export const setAddShoppingCart = (myShoppingCart: any) => ({
   type: Types.uiAddShoppingCart,
   payload: { myShoppingCart },
+});
+// Remove Item from the cart
+export const setRemoveShoppingCart = (id: any) => ({
+  type: Types.uiRemoveShoppingCart,
+  payload: { id },
 });
 
 // Remove All Shopping Cart

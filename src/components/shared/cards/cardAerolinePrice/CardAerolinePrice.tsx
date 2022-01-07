@@ -41,7 +41,7 @@ export const CardAerolinePrice = ({
       {/* HEADER AEROLINE PRICE */}
       {/* CONTENT AEROLINE PRICE */}
       <div className={cardAerolinePrice.content_aeroline_price}>
-        <div>Pasajeros {noPersonas}</div>
+        <div>Pasajeros ({noPersonas}) </div>
         <div></div>
         <div>Precio por persona</div>
         <div>

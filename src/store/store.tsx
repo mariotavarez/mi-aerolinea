@@ -7,6 +7,7 @@ import {
   searchReducer,
   travelsReducer,
   shoppingCartReducer,
+  dataFormReducer,
 } from "../reducers";
 // Redux DevTools Extension
 declare global {
@@ -19,6 +20,7 @@ const reducers = combineReducers({
   searchAction: searchReducer,
   travelsAction: travelsReducer,
   shoppingCartAction: shoppingCartReducer,
+  formData: dataFormReducer,
 });
 
 const composeEnhancers =

@@ -20,6 +20,7 @@ import {
 } from "../../../actions/travelsAction";
 // Hooks
 import { useAlertMessage } from "../../../hooks/useAlertMessage";
+import { addFormData } from "../../../actions/formDataAction";
 
 /**
  * @author Mario Tavarez
@@ -62,17 +63,37 @@ export const Search = () => {
 
   // Search the travels
   const handleSearchTravels = () => {
-    const { origen, destino }: any = valueForm;
+    console.log(valueForm);
+    // Add Form Data
+    const { origen, destino, fechaSalida, pasajeros }: any = valueForm;
     // validate if the origen and destino isnt same
     if (origen === destino) {
       infoMessage({
         title: "Oops",
         text: "El origen y el destino no pueden ser los mismos",
       });
+      // Clean travels of the store
       dispatch(cleanTravels());
       return;
     }
 
+    // Date selected
+    const dateSelected = new Date(fechaSalida);
+    // Substract one day for correct validation
+    const now = new Date(Date.now() - 3600 * 1000 * 24);
+    // If the date selected is minur to the actual date
+    if (dateSelected.getTime() < now.getTime()) {
+      infoMessage({
+        title: "Oops",
+        text: "No es posible seleccionar una fecha menor al día de hoy",
+      });
+      // Clean travels of the store
+      dispatch(cleanTravels());
+      return;
+    }
+    // Add the data form to the store
+    dispatch(addFormData(valueForm));
+    // Add the available travels to the store
     dispatch(getAvailableTravels(valueForm.origen, valueForm.destino));
   };
 

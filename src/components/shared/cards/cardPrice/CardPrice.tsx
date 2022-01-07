@@ -15,17 +15,23 @@ import { AlertModel } from "../../../../interfaces/alerts/AlertModel";
 // Actions
 export const CardPrice = ({
   costoPersona,
+  noPersonas,
+  fecha,
   id,
 }: {
   costoPersona: string;
   id: any;
+  noPersonas: string;
+  fecha: string;
 }) => {
   // Dispatch
   const dispatch = useDispatch();
-
+  // Travels
   const viaje = useSelector((state: any) =>
     state.travelsAction.viajes.find((viaje: any) => viaje.id === id)
   );
+  // Form Data
+  const formData = useSelector((state: any) => state.formData);
   // Alert Message
   const { confirmMessage } = useAlertMessage();
   // History Navigate
@@ -36,10 +42,8 @@ export const CardPrice = ({
     // My Shopping Cart
     const myShoppingCart = {
       id,
-      origen: "grjigr",
-      destino: "grigjr",
-      noPersonas: "2",
-      fecha: "01/05/2022",
+      noPersonas: formData.pasajeros,
+      fecha: formData.fechaSalida,
       ...viaje,
     };
 
@@ -67,7 +71,7 @@ export const CardPrice = ({
         <Button
           icon={<FaHandPointer />}
           onChildClick={() => handleSelectTravel()}
-          text="Elegir"
+          text="Agregar al carrito"
           type={"primary"}
         />
         {/* BUTTON */}

@@ -17,6 +17,7 @@ import { FormModel } from "../../../interfaces/forms/FormModel";
 import { cleanShoppingCart } from "../../../actions/shoppingCartAction";
 // Router Dom
 import { useNavigate } from "react-router-dom";
+import { cleanTravels } from "../../../actions/travelsAction";
 
 const ConfirmData = () => {
   // Alert Message
@@ -47,6 +48,8 @@ const ConfirmData = () => {
     });
     // Clean Shopping Cart
     dispatch(cleanShoppingCart());
+    // Clean Travels
+    dispatch(cleanTravels());
     // Change to the home route
     history("/");
   };

@@ -70,7 +70,7 @@
     max-height: 250px;
     overflow-y: scroll;
 }
-
+// NO ITEMS
 .no_items {
     grid-area: no_items;
     display: grid;
@@ -80,5 +80,13 @@
     & div {
         justify-self: center;
     }
+}
 
+.container_options_delete {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    & span {
+        justify-self: end;
+    }
 }

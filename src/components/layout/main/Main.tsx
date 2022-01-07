@@ -13,6 +13,7 @@ import { Loading } from "../../shared";
 
 export const Main = () => {
   return (
+    // <Loading />
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
         <div className={main.main_container}>

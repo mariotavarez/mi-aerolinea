@@ -3,9 +3,12 @@ import { CardAeroline, Paragraph, Screen } from "../../shared";
 // Styles
 import home from "./Home.module.scss";
 // React Redux
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // Data
 import { PARAGRAPH_DATA } from "../../../data/home/paragraph.data";
+// React Hooks
+import { useEffect } from "react";
+import { cleanTravels } from "../../../actions/travelsAction";
 
 /**
  * @author Mario Tavarez
@@ -14,6 +17,14 @@ import { PARAGRAPH_DATA } from "../../../data/home/paragraph.data";
  * @returns
  */
 const Home = () => {
+  // Dispatch
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Clean the travels
+    dispatch(cleanTravels());
+  }, []);
+
   // PARAGRAPH DATA THAT BUILD THE PARAGRAPH ESTRUCTURES
   const paragraph = PARAGRAPH_DATA.map(({ icon }, index) => (
     <Paragraph key={index} icon={icon} />

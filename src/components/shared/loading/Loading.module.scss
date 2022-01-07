@@ -9,7 +9,10 @@
     grid-template-rows: 1fr;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/miaerolinea-23192.appspot.com/o/miaerolinea%2Fbanners%2Fbackground.jpg?alt=media&token=d5d4e131-6d77-4fe7-bf3f-8eca902fd9d0');
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0.9;
+    height: 100vh;
 }
 
 .loader {
