@@ -2,6 +2,20 @@
 
 Este proyecto es una prueba técnica de True Home
 
+Si desea ver la gestión de proyecto, puede visitar mi espacio de trabajo en `Notion`
+
+En este espacio de trabajo puede encontrar los mockups que diseñé con el fin de tener una línea sobre la cual basarme al programar
+la aplicación
+
+## Notion
+
+Enlace: https://talented-jobaria-d22.notion.site/Mi-aerol-nea-ee845109169b4a01b32b481a83d10913
+
+## Mockups
+
+Diseñados en `Figma`
+Enlace: https://www.figma.com/file/Q7dcl2f63su0xtQ1aV3Gun/Mi-Aerol%C3%ADnea?node-id=0%3A1
+
 ## Scripts disponibles
 
 Se tienen 3 scripts principales para arrancar el proyecto
