@@ -53,9 +53,13 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
-
       & p {
           grid-row: 1 / span 1;
       }
+  }
+
+  .content_search {
+    height: auto;
+    padding: 5px;
   }
 }

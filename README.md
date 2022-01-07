@@ -16,6 +16,10 @@ Enlace: https://talented-jobaria-d22.notion.site/Mi-aerol-nea-ee845109169b4a01b3
 Diseñados en `Figma`
 Enlace: https://www.figma.com/file/Q7dcl2f63su0xtQ1aV3Gun/Mi-Aerol%C3%ADnea?node-id=0%3A1
 
+## URL PRODUCTIVO
+
+Enlace:
+
 ## Scripts disponibles
 
 Se tienen 2 scripts principales para arrancar el proyecto

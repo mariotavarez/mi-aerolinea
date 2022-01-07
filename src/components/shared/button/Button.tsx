@@ -16,7 +16,7 @@ export const Button = ({
         onClick={onChildClick}
         className={`${type} ${size}`}
       >
-        <span>{text}</span> {icon}
+        {`${text}`} {icon}
       </button>
     </>
   );

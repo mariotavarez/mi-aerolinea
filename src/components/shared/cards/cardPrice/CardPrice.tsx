@@ -61,7 +61,7 @@ export const CardPrice = ({
     <div className={cardPrice.container_card_price}>
       {/* COSTO PERSONA */}
       <p>${costoPersona}.00 MXN</p>
-      <span>PRECIO POR PERSONA</span>
+      <span className="text-white">PRECIO POR PERSONA</span>
       {/* COSTO PERSONA */}
       {/* ACTION BUTTON */}
       <div>
